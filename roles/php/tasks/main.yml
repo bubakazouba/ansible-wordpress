@@ -1,0 +1,11 @@
+---
+# tasks file for php
+- name: install php
+  apt: name={{ item }} update_cache=yes state=latest
+  with_items:
+    - php5-fpm
+    - php5-cli
+    - php5-common
+    - php5-mysql
+    - php5
+    - php5-mcrypt
